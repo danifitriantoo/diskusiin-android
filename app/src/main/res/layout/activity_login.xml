@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="@dimen/layout_margin"
+    tools:context=".views.activities.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/normalText"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/normalText"
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:textAlignment="center"
+        android:text="Silahkan Login Menggunakan\nAkun Amikom"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/normalText"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="NIM"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNim"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/normalText"
+            android:textSize="14dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_input_style"
+            android:paddingHorizontal="16dp"
+            android:hint="Masukan NIM (ex. 21.02.0001)"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/normalText"
+            android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Password"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etKey"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/normalText"
+            android:textSize="14dp"
+            android:layout_height="48dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_input_style"
+            android:paddingHorizontal="16dp"
+            android:hint="Masukan Password"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Log In"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

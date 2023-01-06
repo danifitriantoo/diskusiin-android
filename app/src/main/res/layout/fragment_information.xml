@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.InformationFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="Informasi"
+            android:textAppearance="@style/titleText"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="44dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="4dp"
+            android:backgroundTint="@color/primary"
+            android:backgroundTintMode="add"
+            android:background="?android:attr/listDivider" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Tentang aplikasi"
+                    android:textAppearance="@style/sectionText" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_information"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Diskusiin merupakan peranti lunak berbasis Android yang memungkinkan Mamahsiswa Universitas AMIKOM Yogyakarta untuk mengajukan peminjaman ruang diskusi yang ada pada Amikom Resource Center secara daring."
+                    android:textAppearance="@style/bodyText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="12dp"
+                    android:text=""
+                    android:textAppearance="@style/bodyText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Peraturan Peminjaman Ruang Diskusi"
+                    android:textAppearance="@style/sectionText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa, habitant non sit eu id natoque adipiscing sit."
+                    android:textAppearance="@style/bodyText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                    android:textAppearance="@style/bodyText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="2. Massa, habitant non sit eu id natoque adipiscing sit."
+                    android:textAppearance="@style/bodyText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="3. Massa, habitant non sit eu id natoque adipiscing sit."
+                    android:textAppearance="@style/bodyText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="Diam egestas nunc gravida erat. Ultrices in sed sit egestas elit. Id pharetra scelerisque platea sed tellus vitae nibh."
+                    android:textAppearance="@style/bodyText" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="Copyright 2022"
+                    android:textAppearance="@style/bodyText" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

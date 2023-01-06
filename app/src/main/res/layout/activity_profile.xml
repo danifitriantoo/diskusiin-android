@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".views.activities.ProfileActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/profile"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/normalText"
+        android:text="John Doe"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/studentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/normalText"
+        android:text="NIM"
+        android:textStyle="normal"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="44dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/primary"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/red_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Log Out"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
