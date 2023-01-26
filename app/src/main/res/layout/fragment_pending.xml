@@ -38,7 +38,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_pending" />
+                        android:src="@drawable/pending" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView6"
@@ -63,6 +63,7 @@
                         android:textColor="@color/orange"
                         android:background="@drawable/pending_status"
                         android:textAppearance="@style/normalText" />
+
 
                     <TableLayout
                         android:layout_width="match_parent"

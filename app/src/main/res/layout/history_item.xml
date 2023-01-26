@@ -36,7 +36,7 @@
                         android:layout_width="74dp"
                         android:layout_height="74dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/ruang_1" />
+                        app:srcCompat="@drawable/historyroom" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -63,6 +63,55 @@
                         android:text="13/07/2022  ·  12.30 - 14.00 WIB  ·  6 orang"
                         android:textAppearance="@style/normalText"
                         android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvApproved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Terkonfirmasi"
+                            android:textSize="10sp"
+                            android:textColor="@color/green"
+                            android:background="@drawable/success_status"
+                            android:textAppearance="@style/normalText" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Menunggu konfirmasi"
+                            android:textSize="10sp"
+                            android:textColor="@color/orange"
+                            android:background="@drawable/pending_status"
+                            android:textAppearance="@style/normalText" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDisapproved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Peminjaman Ditolak"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp"
+                            android:background="@drawable/red_button"
+                            android:textAppearance="@style/normalText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 

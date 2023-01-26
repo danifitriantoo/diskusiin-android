@@ -14,6 +14,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -41,5 +42,8 @@ public interface EndpointInterface {
 
     @PUT("Rentings/{id}")
     Call<Rentings> editRent(@Body Rentings rentings, @Path("id") int id);
+
+    @DELETE("Rentings/{id}")
+    Call<String> deleteRent(@Path("id") int id);
 
 }

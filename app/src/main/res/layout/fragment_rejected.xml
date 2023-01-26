@@ -168,7 +168,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_rejected" />
+                        android:src="@drawable/rejected" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView6"
@@ -188,7 +188,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Ditolak"
+                        android:text="Peminjaman Ditolak"
                         android:textSize="10sp"
                         android:textColor="@color/white"
                         android:paddingHorizontal="8dp"
@@ -225,13 +225,13 @@
                                 android:text=":  " />
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/textTask"
+                                android:id="@+id/etKeperluan"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="@style/normalText"
-                                android:textSize="12sp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="@string/keperluan" />
+                                android:text="@string/keperluan"
+                                android:textAppearance="@style/normalText"
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -254,9 +254,9 @@
                                 android:textSize="12sp" />
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/textDate"
+                                android:id="@+id/txtDate"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/tanggal"
                                 android:textAppearance="@style/normalText"
@@ -283,7 +283,7 @@
                                 android:textSize="12sp" />
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/textTime"
+                                android:id="@+id/txtTime"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -312,7 +312,7 @@
                                 android:textSize="12sp" />
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/textView4"
+                                android:id="@+id/txtJumlahOrang"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"

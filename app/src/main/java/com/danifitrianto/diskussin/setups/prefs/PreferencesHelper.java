@@ -25,10 +25,9 @@ public class PreferencesHelper  {
         return sharedPreferences;
     }
 
-    public void setCredentials(String nim, String pass, String token)
+    public void setCredentials(String nim, String token)
     {
         sharedPreferences.edit().putString("nim", nim).apply();
-        sharedPreferences.edit().putString("pass", pass).apply();
         sharedPreferences.edit().putString("token", token).apply();
     }
 

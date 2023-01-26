@@ -8,13 +8,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.auth0.android.jwt.JWT;
 import com.danifitrianto.diskussin.R;
 import com.danifitrianto.diskussin.models.Rooms;
 import com.danifitrianto.diskussin.models.Users;
 import com.danifitrianto.diskussin.setups.prefs.PreferencesHelper;
 import com.danifitrianto.diskussin.setups.retrofit.ApiClient;
 import com.danifitrianto.diskussin.setups.retrofit.EndpointInterface;
+import com.danifitrianto.diskussin.setups.services.DecodeToken;
 import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
@@ -47,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(view -> {
             if(!etNim.getText().toString().isEmpty() && !etKey.getText().toString().isEmpty()) {
                 authentication(etNim.getText().toString(),etKey.getText().toString());
+            }else {
+                Toast.makeText(LoginActivity.this,
+                        "Silahkan Masukan NIM dan Password anda!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -65,14 +71,25 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<String> call, Response<String> response) {
                 Log.d("Success","" + response.code());
 
-                preferencesHelper.setCredentials(
-                        model.getNim(),
-                        model.getPassword(),
-                        "Bearer " + response.body());
+                if(response.code() == 200) {
 
-                if(preferencesHelper.getToken().length() > 0) {
+                    try {
+                        JWT jwt = new JWT(response.body());
+                        String clainNim = jwt.getClaim("email").asString();
+
+                        preferencesHelper.setCredentials(
+                                clainNim,
+                                "Bearer " + response.body());
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
                     Intent i = new Intent(LoginActivity.this,HomepageActivity.class);
                     startActivity(i);
+                } else {
+                    Toast.makeText(LoginActivity.this,
+                            "NIM atau Password Tidak Sesuai!", Toast.LENGTH_SHORT).show();
                 }
 
             }

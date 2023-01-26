@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="20dp"
-                    android:text="Diskusiin merupakan peranti lunak berbasis Android yang memungkinkan Mamahsiswa Universitas AMIKOM Yogyakarta untuk mengajukan peminjaman ruang diskusi yang ada pada Amikom Resource Center secara daring."
+                    android:text="@string/about"
                     android:textAppearance="@style/bodyText" />
 
                 <androidx.appcompat.widget.AppCompatTextView

@@ -33,10 +33,51 @@
             android:backgroundTintMode="add"
             android:background="?android:attr/listDivider" />
 
+        <TextView
+            android:id="@+id/tvWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@color/secondary"
+            android:textColor="@color/white"
+            android:text="Anda dapat melakukan perubahan detail pinjaman setelah terkoneksi kembali ke Internet."/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_history"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:text="Woops! Sepertinya kamu belum pernah meminjam ruang diskusi nih, yuk explore."/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/primary_button"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:text="Explore"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

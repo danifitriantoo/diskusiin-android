@@ -3,6 +3,8 @@ package com.danifitrianto.diskussin.views.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +26,7 @@ import com.danifitrianto.diskussin.setups.retrofit.ApiClient;
 import com.danifitrianto.diskussin.setups.retrofit.EndpointInterface;
 import com.danifitrianto.diskussin.setups.room.DatabaseClient;
 import com.danifitrianto.diskussin.views.activities.DetailRoomActivity;
+import com.danifitrianto.diskussin.views.activities.HomepageActivity;
 import com.danifitrianto.diskussin.views.activities.ProfileActivity;
 
 import java.lang.reflect.Array;
@@ -40,10 +43,12 @@ public class HomeFragment extends Fragment {
     private RoomAdapter rvAdapter;
     private ItemClickListener rvListener;
     private PreferencesHelper preferencesHelper;
+    private LinearLayoutCompat linearLayoutCompat;
     private ImageButton btnProfile;
 
     public HomeFragment() {
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,14 +60,28 @@ public class HomeFragment extends Fragment {
         rvRoom = view.findViewById(R.id.rvRoomList);
         btnProfile = view.findViewById(R.id.btnProfile);
         preferencesHelper = PreferencesHelper.getInstance(getContext());
+        linearLayoutCompat = view.findViewById(R.id.linearLayoutCompat);
+
+        checkConnectivity();
 
         btnProfile.setOnClickListener(view1 -> goProfile());
-
-        consumeData();
 
         return view;
     }
 
+    private void checkConnectivity() {
+        HomepageActivity parent = (HomepageActivity) getActivity();
+        boolean isConnected = parent.getNetworkStatus();
+
+        if(isConnected) {
+            rvRoom.setVisibility(View.VISIBLE);
+            linearLayoutCompat.setVisibility(View.GONE);
+            consumeData();
+        } else {
+            rvRoom.setVisibility(View.GONE);
+            linearLayoutCompat.setVisibility(View.VISIBLE);
+        }
+    }
 
     private void consumeData() {
         EndpointInterface services = ApiClient.createService(

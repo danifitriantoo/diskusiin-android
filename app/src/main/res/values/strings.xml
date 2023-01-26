@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Diskussin</string>
+    <string name="app_name">Diskusiin</string>
     <string name="agreement">Saya menyetujui peraturan peminjaman ruang diskusi.</string>
 
     <string name="keperluan">Diskusi Teknis Pengerjaan Lomba PKM</string>
@@ -12,4 +12,5 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">Diskusiin merupakan peranti lunak berbasis Android yang memungkinkan Mahasiswa untuk mengajukan peminjaman fasilitas ruang diskusi secara daring.</string>
 </resources>

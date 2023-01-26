@@ -16,10 +16,10 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ruang_1" />
+                android:src="@drawable/ruangbanner" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -143,11 +143,6 @@
                                     android:textColor="@color/white"
                                     android:textAppearance="@style/tableRowText" />
 
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:minWidth="20dp"
-                                    android:layout_height="20dp"
-                                    android:tint="@color/white"
-                                    android:src="@drawable/icon_konfirmasi"/>
 
                             </TableRow>
 
@@ -168,7 +163,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_konfirmasi" />
+                        android:src="@drawable/aprroved" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textView6"
@@ -332,6 +327,7 @@
                         android:foreground="?android:selectableItemBackground"
                         android:paddingHorizontal="24dp"
                         android:paddingVertical="16dp"
+                        android:visibility="gone"
                         android:stateListAnimator="@null"
                         android:text="Ubah Detail Peminjaman"
                         android:textAllCaps="false"

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.danifitrianto.diskussin.R;
+import com.danifitrianto.diskussin.views.activities.ConfirmationActivity;
 import com.danifitrianto.diskussin.views.activities.DetailRoomActivity;
 import com.danifitrianto.diskussin.views.activities.HomepageActivity;
 
@@ -39,6 +40,15 @@ public class ApprovedFragment extends Fragment {
         tvBoxTanggal = view.findViewById(R.id.tvAATanggal);
         tvBoxWaktu = view.findViewById(R.id.tvAAWaktu);
         btnAEdit = view.findViewById(R.id.btnAEdit);
+
+        ConfirmationActivity parent = (ConfirmationActivity) getActivity();
+        boolean isConnected = parent.getNetworkStatus();
+
+        if(isConnected) {
+            btnAEdit.setVisibility(View.VISIBLE);
+        } else {
+            btnAEdit.setVisibility(View.GONE);
+        }
 
         btnAEdit.setOnClickListener(view1 -> {
             getActivity().finish();

@@ -25,7 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
         preferencesHelper = PreferencesHelper.getInstance(getApplicationContext());
         studentNumber = findViewById(R.id.studentNumber);
 
-        studentNumber.setText(preferencesHelper.getToken());
+        studentNumber.setText(preferencesHelper.getNim());
 
         btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(

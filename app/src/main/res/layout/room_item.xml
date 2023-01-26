@@ -33,7 +33,7 @@
                         android:id="@+id/roomImage"
                         android:layout_width="140dp"
                         android:layout_height="140dp"
-                        app:srcCompat="@drawable/mini_room_one" />
+                        app:srcCompat="@drawable/ruangtiga" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -102,7 +102,7 @@
                             android:textAppearance="@style/normalText"
                             android:textColor="@color/black"
                             android:layout_marginStart="4dp"
-                            android:text="Facility Two"
+                            android:text="AC"
                             android:textSize="14sp" />
 
                     </LinearLayout>
@@ -144,7 +144,7 @@
                             android:textAppearance="@style/normalText"
                             android:textColor="@color/black"
                             android:layout_marginStart="4dp"
-                            android:text="Facility Three"
+                            android:text="Discussion Table Set"
                             android:textSize="14sp" />
 
                     </LinearLayout>

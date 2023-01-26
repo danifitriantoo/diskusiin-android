@@ -53,7 +53,6 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder> {
         final Rooms data = models.get(position);
         holder.tvName.setText(data.getName());
         holder.tvFacilityOne.setText(data.getFacility());
-        holder.tvStatus.setText(String.valueOf(data.isStatus()));
 
         holder.cvRoom.setOnClickListener(view -> itemClickListener.onClick(data));
 
